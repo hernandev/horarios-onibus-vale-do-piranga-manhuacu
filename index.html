@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horários de Ônibus Vale do Piranga — Manhuaçu, MG</title>
+<meta name="description" content="Horários atualizados das linhas de ônibus da Viação Vale do Piranga em Manhuaçu, MG. Sacramento, São Pedro do Avaí, Santo Amaro, Vila Nova, Dom Corrêa, Jaguaraí, Palmeiras e Bom Jesus/Realeza.">
+<meta name="keywords" content="horários ônibus, Vale do Piranga, Manhuaçu, Sacramento, São Pedro do Avaí, Santo Amaro, Vila Nova, Dom Corrêa, Jaguaraí, Palmeiras, Bom Jesus, Realeza, viação, transporte, MG, Minas Gerais">
+<meta name="author" content="Viação Vale do Piranga">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Horários de Ônibus — Viação Vale do Piranga, Manhuaçu">
+<meta property="og:description" content="Consulte os horários das 8 linhas distritais da Viação Vale do Piranga em Manhuaçu, MG. Ida e volta, dias úteis, sábados, domingos e feriados.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Horários de Ônibus — Vale do Piranga, Manhuaçu">
+<meta name="twitter:description" content="Horários atualizados das linhas distritais da Viação Vale do Piranga em Manhuaçu, MG.">
+<link rel="canonical" href="https://hernandev.github.io/horarios-onibus-vale-do-piranga-manhuacu/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Horários de Ônibus — Viação Vale do Piranga",
+  "description": "Horários atualizados das linhas de ônibus da Viação Vale do Piranga em Manhuaçu, MG",
+  "provider": {
+    "@type": "Organization",
+    "name": "Viação Vale do Piranga",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Manhuaçu",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    }
+  },
+  "about": {
+    "@type": "BusTrip",
+    "provider": {
+      "@type": "Organization",
+      "name": "Viação Vale do Piranga"
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#f4f5f7;min-height:100vh}
+body{font-family:'Geist',system-ui,sans-serif;color:#1a1c20;-webkit-font-smoothing:antialiased}
+
+.w{max-width:440px;margin:0 auto;padding:0 14px 48px;min-height:100vh;background:#f4f5f7}
+
+/* header */
+.hd{padding:32px 12px 26px 10px;margin-bottom:32px;display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid #dddfe4}
+.hd h1{font-size:16px;font-weight:700;color:#1a1c20;letter-spacing:-.2px}
+.hd span{font-size:12px;color:#8b8f9a;font-weight:400}
+
+/* accordion */
+.acc{display:flex;flex-direction:column;gap:14px;margin-top:14px}
+
+.it{border-radius:6px;overflow:hidden;background:#fff;border:none;box-shadow:0 0 6px rgba(0,0,0,.25),0 0 20px rgba(0,0,0,.15);transition:box-shadow .25s}
+.it.on{box-shadow:0 0 8px rgba(0,0,0,.3),0 0 28px rgba(0,0,0,.18)}
+
+.tg{
+width:100%;display:flex;align-items:center;gap:10px;
+padding:12px 12px;
+background:#111318;border:none;
+cursor:pointer;text-align:left;font-family:inherit;
+-webkit-tap-highlight-color:transparent;transition:background .15s;
+}
+.tg:hover{background:#1a1d24}
+.tg:active{background:#22252e}
+
+.nm{
+width:24px;height:24px;border-radius:6px;
+background:rgba(255,255,255,.1);color:rgba(255,255,255,.5);
+font-size:11px;font-weight:700;
+display:flex;align-items:center;justify-content:center;flex-shrink:0;
+transition:background .2s,color .2s;
+}
+.it.on .nm{background:rgba(255,255,255,.2);color:#fff}
+
+.lb{flex:1;font-size:14px;font-weight:600;color:#fff;letter-spacing:-.1px}
+
+.ch{width:16px;height:16px;flex-shrink:0;transition:transform .3s cubic-bezier(.4,0,.2,1)}
+.it.on .ch{transform:rotate(180deg)}
+.ch svg{width:12px;height:12px;stroke:rgba(255,255,255,.4);stroke-width:2.5;fill:none}
+
+.bd{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+
+/* direction bar */
+.dr{
+display:flex;align-items:center;
+padding:10px 12px;
+background:#3d4350;color:#d0d4dc;
+font-size:11px;font-weight:600;letter-spacing:.2px;
+}
+.dr .ar{
+width:24px;height:16px;border-radius:3px;margin-right:10px;
+display:flex;align-items:center;justify-content:center;
+font-size:10px;font-weight:700;flex-shrink:0;
+}
+.dr .ar.go{background:rgba(180,185,195,.2);color:#9ca3b0}
+.dr .ar.bk{background:rgba(180,185,195,.2);color:#9ca3b0}
+
+/* table */
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+thead th{
+padding:7px 6px;
+font-size:10px;font-weight:700;
+text-transform:uppercase;letter-spacing:.6px;
+color:#5a5e6a;background:#eceef2;
+border-bottom:1px solid #e2e4e9;
+border-left:1px solid #e2e4e9;
+text-align:center;
+}
+thead th:first-child{text-align:left;padding-left:12px;border-left:none}
+
+tbody td{
+padding:8px 6px;text-align:center;
+border-bottom:1px solid #f0f1f4;
+border-left:1px solid #f0f1f4;
+font-family:'IBM Plex Mono',monospace;
+font-size:12.5px;font-weight:500;color:#1a1c20;
+}
+tbody td:first-child{text-align:left;padding-left:12px;color:#8b8f9a;font-weight:400;border-left:none}
+tbody td:last-child{border-right:none}
+tbody tr:last-child td{border-bottom:none;padding-bottom:12px}
+
+.x{color:#cdd0d8;font-family:'Geist',sans-serif;font-size:12px;font-weight:400}
+
+/* warn */
+.wn{
+display:flex;align-items:center;gap:5px;
+padding:7px 14px;
+font-size:11px;font-weight:500;
+color:#7c6a3a;background:#fdf8ee;
+border-top:1px solid #f0e8d4;
+}
+
+.nt{padding:5px 14px;font-size:10px;color:#8b8f9a;font-style:italic;border-top:1px solid #f0f1f4}
+
+/* footer */
+.ft{text-align:center;margin-top:24px;color:#8b8f9a;font-size:10px;letter-spacing:.2px}
+
+@media print{
+.bd{max-height:none!important;overflow:visible!important}
+.it{break-inside:avoid;margin-bottom:6px;box-shadow:none;border:1px solid #999}
+.ch{display:none}
+.w{padding:0 6px}
+.tg{background:#000!important}
+.nm{background:rgba(255,255,255,.3)!important;color:#fff!important}
+.lb{color:#fff!important}
+.dr{background:#333!important;color:#fff!important}
+.dr .ar{background:rgba(255,255,255,.2)!important;color:#fff!important}
+.hd h1{color:#000!important}
+.hd span{color:#333!important}
+thead th{color:#000!important;border-left-color:#aaa!important;border-bottom-color:#aaa!important}
+tbody td{border-left-color:#bbb!important;border-bottom-color:#ccc!important;color:#000!important}
+tbody td:first-child{color:#000!important}
+.x{color:#888!important}
+.ft{color:#555!important}
+.nt{color:#555!important}
+.wn{color:#333!important}
+}
+</style>
+
+</head>
+<body>
+<div class="w">
+
+<div class="hd">
+  <h1>Horários Vale do Piranga</h1>
+  <span>Manhuaçu, MG</span>
+</div>
+
+<div class="acc">
+
+<!-- 1 Sacramento -->
+
+<div class="it">
+  <button class="tg" onclick="t(this)"><div class="nm">1</div><div class="lb">Sacramento</div><div class="ch"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg></div></button>
+  <div class="bd">
+    <div class="dr"><div class="ar go">→</div>Sacramento → Manhuaçu</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th><th>Dom/Fer</th></tr></thead><tbody>
+      <tr><td>06:25</td><td>06:25</td><td>06:25</td><td class="x">—</td></tr>
+      <tr><td>08:10</td><td class="x">—</td><td class="x">—</td><td>08:10</td></tr>
+      <tr><td>08:30</td><td>08:30</td><td>08:30</td><td class="x">—</td></tr>
+      <tr><td>10:00</td><td>10:00</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>12:10</td><td>12:10</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>14:20</td><td>14:20</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>16:20</td><td>16:20</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>16:40</td><td class="x">—</td><td>16:40</td><td class="x">—</td></tr>
+      <tr><td>16:50</td><td class="x">—</td><td class="x">—</td><td>16:50</td></tr>
+    </tbody></table>
+    <div class="dr"><div class="ar bk">←</div>Manhuaçu → Sacramento</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th><th>Dom/Fer</th></tr></thead><tbody>
+      <tr><td>07:00</td><td class="x">—</td><td class="x">—</td><td>07:00</td></tr>
+      <tr><td>07:10</td><td>07:10</td><td>07:10</td><td class="x">—</td></tr>
+      <tr><td>08:30</td><td>08:30</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>10:45</td><td>10:45</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>12:45</td><td>12:45</td><td>12:45</td><td class="x">—</td></tr>
+      <tr><td>14:45</td><td>14:45</td><td>14:45</td><td class="x">—</td></tr>
+      <tr><td>15:00</td><td class="x">—</td><td class="x">—</td><td>15:00</td></tr>
+      <tr><td>16:50</td><td class="x">—</td><td>16:50</td><td class="x">—</td></tr>
+      <tr><td>17:30</td><td>17:30</td><td class="x">—</td><td class="x">—</td></tr>
+    </tbody></table>
+  </div>
+</div>
+
+<!-- 2 São Pedro do Avaí -->
+
+<div class="it">
+  <button class="tg" onclick="t(this)"><div class="nm">2</div><div class="lb">São Pedro do Avaí</div><div class="ch"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg></div></button>
+  <div class="bd">
+    <div class="dr"><div class="ar go">→</div>São Pedro do Avaí → Manhuaçu</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th><th>Dom/Fer</th></tr></thead><tbody>
+      <tr><td>05:45</td><td>05:45</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>06:00</td><td>06:00</td><td>06:00</td><td>06:00</td></tr>
+      <tr><td>06:55</td><td>06:55</td><td>06:55</td><td class="x">—</td></tr>
+      <tr><td>07:00</td><td>07:00</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>08:00</td><td class="x">—</td><td>08:00</td><td class="x">—</td></tr>
+      <tr><td>08:50</td><td class="x">—</td><td>08:50</td><td class="x">—</td></tr>
+      <tr><td>09:50</td><td>09:50</td><td>09:50</td><td class="x">—</td></tr>
+      <tr><td>11:20</td><td class="x">—</td><td class="x">—</td><td>11:20</td></tr>
+      <tr><td>11:30</td><td>11:30</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>11:45</td><td class="x">—</td><td>11:45</td><td class="x">—</td></tr>
+      <tr><td>12:30</td><td>12:30</td><td>12:30</td><td class="x">—</td></tr>
+      <tr><td>13:10</td><td>13:10</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>13:45</td><td class="x">—</td><td>13:45</td><td class="x">—</td></tr>
+      <tr><td>14:00</td><td>14:00</td><td class="x">—</td><td>14:00</td></tr>
+      <tr><td>14:40</td><td>14:40</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>15:50</td><td>15:50</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>16:40</td><td>16:40</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>17:00</td><td class="x">—</td><td>17:00</td><td class="x">—</td></tr>
+      <tr><td>17:20</td><td>17:20</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>18:30</td><td>18:30</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>21:00</td><td>21:00</td><td class="x">—</td><td class="x">—</td></tr>
+    </tbody></table>
+    <div class="dr"><div class="ar bk">←</div>Manhuaçu → São Pedro do Avaí</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th><th>Dom/Fer</th></tr></thead><tbody>
+      <tr><td>05:55</td><td>05:55</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>07:10</td><td>07:10</td><td>07:10</td><td class="x">—</td></tr>
+      <tr><td>08:15</td><td>08:15</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>08:45</td><td class="x">—</td><td>08:45</td><td class="x">—</td></tr>
+      <tr><td>10:00</td><td>10:00</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>10:40</td><td class="x">—</td><td class="x">—</td><td>10:40</td></tr>
+      <tr><td>10:45</td><td>10:45</td><td>10:45</td><td class="x">—</td></tr>
+      <tr><td>11:30</td><td class="x">—</td><td>11:30</td><td class="x">—</td></tr>
+      <tr><td>11:40</td><td>11:40</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>12:20</td><td>12:20</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>12:45</td><td>12:45</td><td>12:45</td><td>12:45</td></tr>
+      <tr><td>14:30</td><td>14:30</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>14:45</td><td>14:45</td><td>14:45</td><td class="x">—</td></tr>
+      <tr><td>15:45</td><td>15:45</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>15:50</td><td class="x">—</td><td>15:50</td><td class="x">—</td></tr>
+      <tr><td>15:55</td><td>15:55</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>16:45</td><td>16:45</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>16:50</td><td class="x">—</td><td>16:50</td><td class="x">—</td></tr>
+      <tr><td>17:00</td><td>17:00</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>17:15</td><td>17:15</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>17:30</td><td>17:30</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>18:30</td><td>18:30</td><td class="x">—</td><td>18:30</td></tr>
+      <tr><td>19:30</td><td>19:30</td><td>19:30</td><td class="x">—</td></tr>
+      <tr><td>22:30</td><td>22:30</td><td class="x">—</td><td class="x">—</td></tr>
+    </tbody></table>
+    <div class="nt">* Sáb 19:30 via Santo Amaro</div>
+  </div>
+</div>
+
+<!-- 3 Santo Amaro -->
+
+<div class="it">
+  <button class="tg" onclick="t(this)"><div class="nm">3</div><div class="lb">Santo Amaro</div><div class="ch"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg></div></button>
+  <div class="bd">
+    <div class="dr"><div class="ar go">→</div>Santo Amaro → Manhuaçu</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th><th>Dom/Fer</th></tr></thead><tbody>
+      <tr><td>06:00</td><td>06:00</td><td>06:00</td><td class="x">—</td></tr>
+      <tr><td>06:50</td><td>06:50</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>07:20</td><td class="x">—</td><td class="x">—</td><td>07:20</td></tr>
+      <tr><td>08:15</td><td>08:15</td><td>08:15</td><td class="x">—</td></tr>
+      <tr><td>11:20</td><td>11:20</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>12:50</td><td>12:50</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>15:00</td><td>15:00</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>16:50</td><td class="x">—</td><td class="x">—</td><td>16:50</td></tr>
+    </tbody></table>
+    <div class="dr"><div class="ar bk">←</div>Manhuaçu → Santo Amaro</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th><th>Dom/Fer</th></tr></thead><tbody>
+      <tr><td>06:50</td><td>06:50</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>07:00</td><td class="x">—</td><td>07:00</td><td class="x">—</td></tr>
+      <tr><td>08:30</td><td class="x">—</td><td class="x">—</td><td>08:30</td></tr>
+      <tr><td>09:30</td><td>09:30</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>11:30</td><td>11:30</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>13:25</td><td class="x">—</td><td>13:25</td><td class="x">—</td></tr>
+      <tr><td>13:40</td><td>13:40</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>16:20</td><td>16:20</td><td class="x">—</td><td class="x">—</td></tr>
+      <tr><td>18:00</td><td>18:00</td><td class="x">—</td><td>18:00</td></tr>
+      <tr><td>19:30</td><td class="x">—</td><td>19:30</td><td class="x">—</td></tr>
+    </tbody></table>
+  </div>
+</div>
+
+<!-- 4 Vila Nova -->
+
+<div class="it">
+  <button class="tg" onclick="t(this)"><div class="nm">4</div><div class="lb">Vila Nova</div><div class="ch"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg></div></button>
+  <div class="bd">
+    <div class="dr"><div class="ar go">→</div>Vila Nova → Manhuaçu</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th></tr></thead><tbody>
+      <tr><td>06:30</td><td>06:30</td><td class="x">—</td></tr>
+      <tr><td>07:00</td><td>07:00</td><td class="x">—</td></tr>
+      <tr><td>08:00</td><td>08:00</td><td class="x">—</td></tr>
+      <tr><td>08:20</td><td>08:20</td><td class="x">—</td></tr>
+    </tbody></table>
+    <div class="wn">⚠ Sem serviço aos sáb. (ida), dom. e feriados</div>
+    <div class="dr"><div class="ar bk">←</div>Manhuaçu → Vila Nova</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th></tr></thead><tbody>
+      <tr><td>06:40</td><td>06:40</td><td class="x">—</td></tr>
+      <tr><td>07:40</td><td>07:40</td><td class="x">—</td></tr>
+      <tr><td>12:20</td><td>12:20</td><td class="x">—</td></tr>
+      <tr><td>12:45</td><td class="x">—</td><td>12:45</td></tr>
+      <tr><td>13:40</td><td>13:40</td><td class="x">—</td></tr>
+      <tr><td>14:30</td><td>14:30</td><td class="x">—</td></tr>
+      <tr><td>14:45</td><td class="x">—</td><td>14:45</td></tr>
+      <tr><td>15:45</td><td>15:45</td><td class="x">—</td></tr>
+      <tr><td>15:50</td><td class="x">—</td><td>15:50</td></tr>
+      <tr><td>16:50</td><td class="x">—</td><td>16:50</td></tr>
+      <tr><td>17:00</td><td>17:00</td><td class="x">—</td></tr>
+    </tbody></table>
+    <div class="wn">⚠ Sem serviço aos domingos e feriados</div>
+  </div>
+</div>
+
+<!-- 5 Dom Corrêa -->
+
+<div class="it">
+  <button class="tg" onclick="t(this)"><div class="nm">5</div><div class="lb">Dom Corrêa</div><div class="ch"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg></div></button>
+  <div class="bd">
+    <div class="dr"><div class="ar go">→</div>Dom Corrêa → Manhuaçu</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th></tr></thead><tbody>
+      <tr><td>11:40</td><td>11:40</td><td class="x">—</td></tr>
+      <tr><td>15:55</td><td>15:55</td><td class="x">—</td></tr>
+      <tr><td>16:50</td><td class="x">—</td><td>16:50</td></tr>
+    </tbody></table>
+    <div class="dr"><div class="ar bk">←</div>Manhuaçu → Dom Corrêa</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th></tr></thead><tbody>
+      <tr><td>11:40</td><td>11:40</td><td class="x">—</td></tr>
+      <tr><td>15:55</td><td>15:55</td><td class="x">—</td></tr>
+      <tr><td>16:50</td><td class="x">—</td><td>16:50</td></tr>
+    </tbody></table>
+    <div class="wn">⚠ Sem serviço aos domingos e feriados</div>
+  </div>
+</div>
+
+<!-- 6 Jaguaraí -->
+
+<div class="it">
+  <button class="tg" onclick="t(this)"><div class="nm">6</div><div class="lb">Jaguaraí</div><div class="ch"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg></div></button>
+  <div class="bd">
+    <div class="dr"><div class="ar go">→</div>Jaguaraí → Manhuaçu</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th></tr></thead><tbody>
+      <tr><td>07:30</td><td>07:30</td><td>07:30</td></tr>
+      <tr><td>13:00</td><td>13:00</td><td class="x">—</td></tr>
+    </tbody></table>
+    <div class="dr"><div class="ar bk">←</div>Manhuaçu → Jaguaraí</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th></tr></thead><tbody>
+      <tr><td>11:00</td><td>11:00</td><td class="x">—</td></tr>
+      <tr><td>12:45</td><td class="x">—</td><td>12:45</td></tr>
+      <tr><td>16:00</td><td>16:00</td><td class="x">—</td></tr>
+    </tbody></table>
+    <div class="wn">⚠ Sem serviço aos domingos e feriados</div>
+  </div>
+</div>
+
+<!-- 7 Palmeiras -->
+
+<div class="it">
+  <button class="tg" onclick="t(this)"><div class="nm">7</div><div class="lb">Palmeiras</div><div class="ch"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg></div></button>
+  <div class="bd">
+    <div class="dr"><div class="ar go">→</div>Palmeiras → Manhuaçu</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th></tr></thead><tbody>
+      <tr><td>07:30</td><td>07:30</td><td>07:30</td></tr>
+    </tbody></table>
+    <div class="dr"><div class="ar bk">←</div>Manhuaçu → Palmeiras</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th></tr></thead><tbody>
+      <tr><td>14:40</td><td>14:40</td><td>14:40</td></tr>
+    </tbody></table>
+    <div class="wn">⚠ Sem serviço aos domingos e feriados</div>
+  </div>
+</div>
+
+<!-- 8 Bom Jesus / Realeza -->
+
+<div class="it">
+  <button class="tg" onclick="t(this)"><div class="nm">8</div><div class="lb">Bom Jesus / Realeza</div><div class="ch"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg></div></button>
+  <div class="bd">
+    <div class="dr"><div class="ar go">→</div>Bom Jesus → Manhuaçu</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th></tr></thead><tbody>
+      <tr><td>05:45</td><td>05:45</td><td>05:45</td></tr>
+      <tr><td>11:00</td><td>11:00</td><td class="x">—</td></tr>
+    </tbody></table>
+    <div class="dr"><div class="ar go">→</div>Realeza → Manhuaçu</div>
+    <table><thead><tr><th>Horário</th><th>Seg–Sex</th><th>Sáb</th></tr></thead><tbody>
+      <tr><td>09:30</td><td>09:30</td><td class="x">—</td></tr>
+      <tr><td>13:25</td><td class="x">—</td><td>13:25</td></tr>
+      <tr><td>16:20</td><td>16:20</td><td class="x">—</td></tr>
+    </tbody></table>
+    <div class="wn">⚠ Sem serviço aos domingos e feriados</div>
+  </div>
+</div>
+
+</div>
+
+<div class="ft">Fonte: onibus.online · 2025</div>
+
+</div>
+<script>
+function t(b){var i=b.parentElement,d=i.querySelector('.bd');if(i.classList.contains('on')){d.style.maxHeight='0';i.classList.remove('on')}else{i.classList.add('on');d.style.maxHeight=d.scrollHeight+'px'}}
+</script>
+</body>
+</html>
